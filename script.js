@@ -31,7 +31,9 @@ function addNewNote(text = ''){
     main.innerHTML = marked(text)
 
     deleteBtn.addEventListener('click', ()=> {
-      note.remove() 
+      note.style.opacity= 0;
+      setTimeout(() => note.remove(), 300);
+
 
       updateLS()
     })
